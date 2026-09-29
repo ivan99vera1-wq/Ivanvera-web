@@ -38,8 +38,9 @@ incrustado y vías de contacto directo.
 | --- | --- |
 | **Diseño** | Tema oscuro tipo terminal con fondo aurora animado, rejilla, lluvia de código y tipografía monoespaciada. |
 | **Animaciones** | 10 efectos escritos a mano en vanilla JS (ver abajo), sin librerías de animación. |
+| **Carrusel de stack** | Tira infinita de logos (Java, SQL, TypeScript, HTML/CSS, Claude, ChatGPT, opencode, GitHub, IntelliJ) que **se pausa al pasar el ratón**; cada ficha se eleva, se ilumina y recupera su color a plena saturación. |
 | **Responsive** | Diseño fluido con puntos de corte en `760px` y `480px`; menú hamburguesa en móvil. |
-| **Accesibilidad** | HTML semántico, `aria-*` en la navegación, soporte completo de `prefers-reduced-motion` (desactiva lluvia, reveal, tilt y transiciones). |
+| **Accesibilidad** | HTML semántico, `aria-*` en la navegación y en el carrusel, soporte completo de `prefers-reduced-motion` (desactiva lluvia, reveal, tilt, carrusel y transiciones). |
 | **SEO / Social** | `title`, `meta description`, `theme-color`, Open Graph y Twitter Card, favicon + apple-touch-icon. |
 | **Rendimiento** | Imágenes optimizadas y con `loading="lazy"`, sin librerías externas, CSS y JS sin procesar. |
 
@@ -59,21 +60,29 @@ incrustado y vías de contacto directo.
 > Todos los efectos se desactivan automáticamente si el sistema declara
 > «movimiento reducido» o si el dispositivo no tiene puntero fino.
 
+<div align="center">
+<img src="docs/preview-stack.jpg" alt="Apartado 02 Stack e IA con el carrusel de logos" width="900">
+<br>
+<sub>Apartado 02 · Stack & IA, con el carrusel de iconos</sub>
+</div>
+
 ## 📁 Estructura
 
 ```text
 Ivanvera-web/
 ├── index.html          # Estructura y todos los contenidos
 ├── styles.css          # Diseño, tema, keyframes y responsive
-├── script.js           # Las 10 animaciones (IIFE, vanilla JS)
+├── script.js           # Las 10 animaciones + el carrusel (IIFE, vanilla JS)
 ├── assets/
-│   └── avatar.jpg      # Foto de perfil (también usada como og:image)
+│   ├── avatar.jpg      # Foto de perfil (también usada como og:image)
+│   └── logos/          # 10 SVG del carrusel de stack
 ├── favicon/
-│   ├── favicon.png             # Icono de pestaña (512×512)
-│   ├── apple-touch-icon.png    # Icono para iOS (180×180)
-│   └── logo.png                 # Logo original en alta resolución
+│   ├── favicon.png             # Icono de pestaña (512×512, ~79 KB)
+│   ├── apple-touch-icon.png    # Icono para iOS (180×180, ~13 KB)
+│   └── logo.png                 # Fuente original del icono (1254×1254)
 ├── docs/
-│   ├── preview.jpg             # Captura usada en este README
+│   ├── preview.jpg             # Captura del hero (este README)
+│   ├── preview-stack.jpg       # Captura del apartado 02
 │   └── superpowers/specs/      # Especificación de diseño
 └── .gitignore
 ```
@@ -81,9 +90,20 @@ Ivanvera-web/
 ## 🛠 Stack
 
 - **HTML5** semántico
-- **CSS3**: variables, grid/flex, `clamp()`, *backdrop-filter*, keyframes
+- **CSS3**: variables, grid/flex, `clamp()`, *backdrop-filter*, keyframes, máscaras
 - **JavaScript ES6+** sin dependencias (DOM, `IntersectionObserver`, `requestAnimationFrame`)
 - **Embeds oficiales de Instagram** (`instagram.com/embed.js`)
+
+### Iconos y favicon
+
+- **Logos del carrusel**: [Devicon](https://devicon.dev/), [Simple Icons](https://simpleicons.org/), [Lucide](https://lucide.dev/) y el SVG oficial de opencode — servidos como archivos locales en `assets/logos/` (la web no hace peticiones a CDNs en tiempo de ejecución).
+- **Favicon**: icono de terminal neón generado a partir de `favicon/logo.png`.
+
+| Archivo | Uso | Tamaño |
+| --- | --- | --- |
+| `favicon/favicon.png` | Icono de pestaña (`rel="icon"`) | 512×512 · ~79 KB |
+| `favicon/apple-touch-icon.png` | Icono táctil en iOS | 180×180 · ~13 KB |
+| `favicon/logo.png` | Fuente original en alta resolución | 1254×1254 · ~1,1 MB |
 
 ## 🚀 Ejecutar en local
 
@@ -136,7 +156,8 @@ GitHub Pages reconstruye el sitio automáticamente (1–2 minutos).
 | Colores, tipografía y animación CSS | `styles.css` → bloque `:root` |
 | Comportamiento de las animaciones | `script.js` |
 | Foto de perfil | `assets/avatar.jpg` (misma usada en `og:image`) |
-| Favicon | `favicon/favicon.png` y `favicon/apple-touch-icon.png` |
+| Logos del carrusel | `assets/logos/*.svg` (la fila se clona sola en `script.js`) |
+| Favicon | `favicon/logo.png` → regenerar `favicon/favicon.png` y `favicon/apple-touch-icon.png` |
 | Contacto (email / WhatsApp / Instagram / GitHub) | `index.html` → sección `#contacto` |
 
 ## 📬 Contacto

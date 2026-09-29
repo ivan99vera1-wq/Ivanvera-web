@@ -239,7 +239,19 @@
   }
 
   /* ----------------------------------------------------------
-     11. Arranque
+     11. Carrusel de logos del stack (la fila se duplica)
+  ---------------------------------------------------------- */
+  const mTrack = $('#marqueeTrack');
+  if (mTrack) {
+    const row = mTrack.innerHTML;
+    mTrack.insertAdjacentHTML('beforeend', row + row + row);
+    Array.from(mTrack.children).forEach((r, i) => {
+      if (i > 0) r.setAttribute('aria-hidden', 'true');
+    });
+  }
+
+  /* ----------------------------------------------------------
+     12. Arranque
   ---------------------------------------------------------- */
   const boot = () => {
     onScroll();
