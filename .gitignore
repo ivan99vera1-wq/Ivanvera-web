@@ -35,3 +35,10 @@ bin/
 
 ### Brainstorming companion ###
 .superpowers/
+
+### Vídeo original (no forma parte de la web) ###
+instagram-historias/IMG_2944.MP4
+
+### Música local de la historia (licencia) ###
+instagram-historias/*.mp3
+instagram-historias/*.m4a

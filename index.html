@@ -9,7 +9,7 @@
   <meta property="og:type" content="profile">
   <meta property="og:title" content="Ivan Vera — FP DAM · Java · IA">
   <meta property="og:description" content="27 años · 🇵🇾 Paraguayo · Madrid · FP DAM · Java, SQL e IA.">
-  <meta property="og:image" content="https://avatars.githubusercontent.com/u/250408943?v=4">
+  <meta property="og:image" content="https://ivan99vera1-wq.github.io/Ivanvera-web/assets/avatar.jpg">
   <meta property="og:locale" content="es_ES">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&gt;_</text></svg>">
@@ -64,6 +64,14 @@
 
         <div class="cta reveal">
           <a class="btn btn-primary" href="#proyectos">./ver_proyectos</a>
+          <button class="story-btn" id="storyBtn" type="button" aria-label="Ver historia destacada">
+            <span class="story-ring">
+              <span class="story-thumb">
+                <img src="instagram-historias/IMG_2856.JPG" alt="Historia destacada" loading="lazy">
+              </span>
+            </span>
+            <span class="story-name">⭐️</span>
+          </button>
           <a class="btn btn-ghost" href="#contacto">Contactar ↗</a>
         </div>
 
@@ -89,7 +97,7 @@
         <div class="about-grid">
           <figure class="avatar-card reveal">
             <div class="avatar-frame">
-              <img src="https://avatars.githubusercontent.com/u/250408943?v=4"
+              <img src="assets/avatar.jpg"
                    alt="Foto de perfil de Iván Vera" width="240" height="240" loading="lazy">
             </div>
             <figcaption>
@@ -101,7 +109,7 @@
           <div class="about-body reveal">
             <p>
               Soy <b>Iván</b>, tengo 27 años, nací en 🇵🇾 <b>Paraguay</b> y vivo en <b>Madrid</b>.
-              Estoy cursando el <b>Grado Superior en Desarrollo de Aplicaciones Multiplataforma (FP DAM)</b>
+              Estoy cursando el <b>Grado Superior en Desarrollo de Aplicaciones Multiplataforma (FP DAM) en Ilerna, Madrid</b>
               y escribo mis primeros programas en <b>Java</b>.
             </p>
             <p>
@@ -117,7 +125,7 @@
               <li><span>Vivo en</span><b>Madrid, España</b></li>
               <li><span>Estudios</span><b>FP DAM</b></li>
               <li><span>Enfoque</span><b>Java · SQL · IA</b></li>
-              <li><span>Idiomas</span><b>ES · GU (guaraní)</b></li>
+              <li><span>Idiomas</span><b>ES · GU (guaraní) · EN · PT</b></li>
             </ul>
           </div>
         </div>
@@ -309,6 +317,29 @@ String nombre = scanner.nextLine();</code></pre>
     </section>
 
   </main>
+
+  <!-- ============ VISOR DE HISTORIA DESTACADA ============ -->
+  <div class="story" id="story" role="dialog" aria-modal="true" aria-label="Historia destacada" hidden>
+    <div class="story-bars" id="storyBars" aria-hidden="true"></div>
+
+    <header class="story-head">
+      <span class="story-ring sm">
+        <span class="story-thumb"><img src="instagram-historias/IMG_2856.JPG" alt=""></span>
+      </span>
+      <span class="story-title">⭐️</span>
+      <span class="story-song" id="storySong" hidden>♪ The Nights — Avicii</span>
+      <span class="story-spacer"></span>
+      <button class="story-ico" id="storySound" type="button" aria-label="Silenciar la música">♪</button>
+      <button class="story-ico" id="storyClose" type="button" aria-label="Cerrar historia">✕</button>
+    </header>
+
+    <div class="story-stage" id="storyStage"></div>
+
+    <button class="story-zone z-prev" id="storyPrev" type="button" aria-label="Foto anterior"></button>
+    <button class="story-zone z-next" id="storyNext" type="button" aria-label="Foto siguiente"></button>
+  </div>
+
+  <audio id="storyMusic" src="instagram-historias/the-nights.mp3" preload="auto"></audio>
 
   <script src="script.js"></script>
   <script async src="https://www.instagram.com/embed.js"></script>
