@@ -64,14 +64,6 @@
 
         <div class="cta reveal">
           <a class="btn btn-primary" href="#proyectos">./ver_proyectos</a>
-          <button class="story-btn" id="storyBtn" type="button" aria-label="Ver historia destacada">
-            <span class="story-ring">
-              <span class="story-thumb">
-                <img src="instagram-historias/IMG_2856.JPG" alt="Historia destacada" loading="lazy">
-              </span>
-            </span>
-            <span class="story-name">⭐️</span>
-          </button>
           <a class="btn btn-ghost" href="#contacto">Contactar ↗</a>
         </div>
 
@@ -317,29 +309,6 @@ String nombre = scanner.nextLine();</code></pre>
     </section>
 
   </main>
-
-  <!-- ============ VISOR DE HISTORIA DESTACADA ============ -->
-  <div class="story" id="story" role="dialog" aria-modal="true" aria-label="Historia destacada" hidden>
-    <div class="story-bars" id="storyBars" aria-hidden="true"></div>
-
-    <header class="story-head">
-      <span class="story-ring sm">
-        <span class="story-thumb"><img src="instagram-historias/IMG_2856.JPG" alt=""></span>
-      </span>
-      <span class="story-title">⭐️</span>
-      <span class="story-song" id="storySong" hidden>♪ The Nights — Avicii</span>
-      <span class="story-spacer"></span>
-      <button class="story-ico" id="storySound" type="button" aria-label="Silenciar la música">♪</button>
-      <button class="story-ico" id="storyClose" type="button" aria-label="Cerrar historia">✕</button>
-    </header>
-
-    <div class="story-stage" id="storyStage"></div>
-
-    <button class="story-zone z-prev" id="storyPrev" type="button" aria-label="Foto anterior"></button>
-    <button class="story-zone z-next" id="storyNext" type="button" aria-label="Foto siguiente"></button>
-  </div>
-
-  <audio id="storyMusic" src="instagram-historias/the-nights.mp3" preload="auto"></audio>
 
   <script src="script.js"></script>
   <script async src="https://www.instagram.com/embed.js"></script>
