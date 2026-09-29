@@ -54,15 +54,16 @@
   }
 
   /* ----------------------------------------------------------
-     3. Glitch periódico en el nombre
+     3. Glitch periódico en el nombre (solo con el hero visible)
   ---------------------------------------------------------- */
+  let heroInView = true;
   const glitch = $('.glitch');
   if (glitch && !reduce) {
     const fire = () => {
       glitch.classList.add('on');
       setTimeout(() => glitch.classList.remove('on'), 340);
     };
-    setInterval(() => { if (Math.random() > 0.35) fire(); }, 3800);
+    setInterval(() => { if (heroInView && Math.random() > 0.35) fire(); }, 3800);
     setTimeout(fire, 1900);
   }
 
@@ -165,10 +166,6 @@
     if (progress) progress.style.width = (max > 0 ? (y / max) * 100 : 0) + '%';
     if (topbar) topbar.classList.toggle('stuck', y > 24);
 
-    /* parallax del aurora */
-    const aurora = $('#aurora');
-    if (aurora && !reduce) aurora.style.transform = `translate3d(0, ${y * 0.18}px, 0)`;
-
     /* scrollspy */
     const probe = y + window.innerHeight * 0.35;
     let current = sections[0];
@@ -251,7 +248,42 @@
   }
 
   /* ----------------------------------------------------------
-     12. Arranque
+     12. Pausa de animaciones cuando la sección no está en pantalla
+  ---------------------------------------------------------- */
+  const heroEl = $('.hero');
+  if (heroEl) {
+    new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        heroInView = e.isIntersecting;
+        heroEl.classList.toggle('paused', !heroInView);
+      });
+    }, { threshold: 0 }).observe(heroEl);
+  }
+  const marqueeEl = $('.marquee');
+  if (marqueeEl) {
+    new IntersectionObserver(entries => {
+      entries.forEach(e => e.target.classList.toggle('paused', !e.isIntersecting));
+    }, { threshold: 0 }).observe(marqueeEl);
+  }
+
+  /* ----------------------------------------------------------
+     13. Instagram: embed.js solo cuando la sección se acerca
+  ---------------------------------------------------------- */
+  const igSection = $('#instagram');
+  if (igSection) {
+    const igio = new IntersectionObserver((entries, obs) => {
+      if (!entries.some(e => e.isIntersecting)) return;
+      const s = document.createElement('script');
+      s.src = 'https://www.instagram.com/embed.js';
+      s.async = true;
+      document.body.appendChild(s);
+      obs.disconnect();
+    }, { rootMargin: '600px 0px' });
+    igio.observe(igSection);
+  }
+
+  /* ----------------------------------------------------------
+     14. Arranque
   ---------------------------------------------------------- */
   const boot = () => {
     onScroll();
