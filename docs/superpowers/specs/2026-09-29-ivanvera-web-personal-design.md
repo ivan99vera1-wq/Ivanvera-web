@@ -2,7 +2,7 @@
 
 **Fecha:** 2026-09-29
 **Estado:** aprobado por el usuario (pendiente de revisión del documento)
-**Repo:** `Ivanvera-web` (`github.com/ivan99vera1-wq`)
+**Repo:** `Ivanvera-web` (`github.com/ivanvera7`)
 
 ## 1. Objetivo
 
@@ -22,7 +22,7 @@ Toda la información de la web sale de fuentes verificadas:
 | Email | `ivan99vera1@gmail.com` |
 | WhatsApp | `683224002` → `https://wa.me/34683224002` |
 | Instagram | `@ivanvera7_` → `https://www.instagram.com/ivanvera7_/` |
-| GitHub | `@ivan99vera1-wq` → `https://github.com/ivan99vera1-wq` |
+| GitHub | `@ivanvera7` → `https://github.com/ivanvera7` |
 | Avatar | `https://avatars.githubusercontent.com/u/250408943?v=4` |
 
 ### 2.1 Publicaciones de Instagram (4)

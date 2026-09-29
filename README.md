@@ -4,7 +4,7 @@
 
 **Portafolio personal con estética terminal / dev oscuro, animaciones propias y cero dependencias.**
 
-[![Web en vivo](https://img.shields.io/badge/web-en%20línea-3fb950?style=flat-square)](https://ivan99vera1-wq.github.io/Ivanvera-web/)
+[![Web en vivo](https://img.shields.io/badge/web-en%20línea-3fb950?style=flat-square)](https://ivanvera7.github.io/Ivanvera-web/)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=fff)](https://developer.mozilla.org/es/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=fff)](https://developer.mozilla.org/es/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=000)](https://developer.mozilla.org/es/docs/Web/JavaScript)
@@ -13,7 +13,7 @@
 
 <br>
 
-**[Web en vivo](https://ivan99vera1-wq.github.io/Ivanvera-web/)** · **[Instagram](https://www.instagram.com/ivanvera7_/)** · **[GitHub](https://github.com/ivan99vera1-wq)** · **[Email](mailto:ivan99vera1@gmail.com)**
+**[Web en vivo](https://ivanvera7.github.io/Ivanvera-web/)** · **[Instagram](https://www.instagram.com/ivanvera7_/)** · **[GitHub](https://github.com/ivanvera7)** · **[Email](mailto:ivan99vera1@gmail.com)**
 
 <img src="docs/preview.jpg" alt="Vista previa de la web personal de Iván Vera" width="900">
 
@@ -111,7 +111,7 @@ No hay instalación: solo hace falta un servidor estático (los *embeds* de
 Instagram **no cargan** si abres el archivo con `file://`).
 
 ```bash
-git clone https://github.com/ivan99vera1-wq/Ivanvera-web.git
+git clone https://github.com/ivanvera7/Ivanvera-web.git
 cd Ivanvera-web
 python3 -m http.server 8099
 ```
@@ -124,7 +124,7 @@ Abre **http://localhost:8099**
 
 La web está publicada en **GitHub Pages** desde la rama `main` (raíz del repo):
 
-**https://ivan99vera1-wq.github.io/Ivanvera-web/**
+**https://ivanvera7.github.io/Ivanvera-web/**
 
 Para publicar cambios:
 
@@ -140,13 +140,13 @@ GitHub Pages reconstruye el sitio automáticamente (1–2 minutos).
 
 | # | Proyecto | Stack | Repositorio | En vivo |
 | - | -------- | ----- | ----------- | ------- |
-| 01 | Hola Mundo | Java | [repo](https://github.com/ivan99vera1-wq/Ejercicio1-HolaMundo) | — |
-| 02 | Variables | Java | [repo](https://github.com/ivan99vera1-wq/Ejercicio2-Variables) | — |
-| 03 | Sumar | Java | [repo](https://github.com/ivan99vera1-wq/Ejercicio3-Sumar) | — |
-| 04 | Calculadora | Java | [repo](https://github.com/ivan99vera1-wq/Ejercicio4-Calculadora) | — |
-| 05 | Info de usuario | Java | [repo](https://github.com/ivan99vera1-wq/Ejercicio5-Info-de-usuario) | — |
-| 06 | Servitek-web | Next.js · TypeScript · Tailwind | [repo](https://github.com/ivan99vera1-wq/servitek-web) | [servitek.pages.dev](https://servitek.pages.dev) |
-| 07 | Solca Decoraciones | React · TypeScript | [repo](https://github.com/ivan99vera1-wq/Solca-decoraciones) | [solca-decoraciones.vercel.app](https://solca-decoraciones.vercel.app) |
+| 01 | Hola Mundo | Java | [repo](https://github.com/ivanvera7/Ejercicio1-HolaMundo) | — |
+| 02 | Variables | Java | [repo](https://github.com/ivanvera7/Ejercicio2-Variables) | — |
+| 03 | Sumar | Java | [repo](https://github.com/ivanvera7/Ejercicio3-Sumar) | — |
+| 04 | Calculadora | Java | [repo](https://github.com/ivanvera7/Ejercicio4-Calculadora) | — |
+| 05 | Info de usuario | Java | [repo](https://github.com/ivanvera7/Ejercicio5-Info-de-usuario) | — |
+| 06 | Servitek-web | Next.js · TypeScript · Tailwind | [repo](https://github.com/ivanvera7/servitek-web) | [servitek.pages.dev](https://servitek.pages.dev) |
+| 07 | Solca Decoraciones | React · TypeScript | [repo](https://github.com/ivanvera7/Solca-decoraciones) | [solca-decoraciones.vercel.app](https://solca-decoraciones.vercel.app) |
 
 ## ✏️ Personalización
 
@@ -165,7 +165,7 @@ GitHub Pages reconstruye el sitio automáticamente (1–2 minutos).
 - **Email:** [ivan99vera1@gmail.com](mailto:ivan99vera1@gmail.com)
 - **WhatsApp:** [+34 683 224 002](https://wa.me/34683224002)
 - **Instagram:** [@ivanvera7_](https://www.instagram.com/ivanvera7_/)
-- **GitHub:** [@ivan99vera1-wq](https://github.com/ivan99vera1-wq)
+- **GitHub:** [@ivanvera7](https://github.com/ivanvera7)
 
 ---
 
