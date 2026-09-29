@@ -71,7 +71,7 @@ Ivanvera-web/
 ├── favicon/
 │   ├── favicon.png             # Icono de pestaña (512×512)
 │   ├── apple-touch-icon.png    # Icono para iOS (180×180)
-│   └── iv-logo.png             # Logo original en alta resolución
+│   └── logo.png                 # Logo original en alta resolución
 ├── docs/
 │   ├── preview.jpg             # Captura usada en este README
 │   └── superpowers/specs/      # Especificación de diseño
