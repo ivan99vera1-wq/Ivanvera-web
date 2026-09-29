@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ivan Vera — FP DAM · Java · IA</title>
+  <meta name="description" content="Iván Vera, 27 años, paraguayo en Madrid. Estudiante de FP DAM, desarrollo en Java y SQL, uso de IA y Claude para proyectos. Portafolio, proyectos y contacto.">
+  <meta name="theme-color" content="#0d1117">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Ivan Vera — FP DAM · Java · IA">
+  <meta property="og:description" content="27 años · 🇵🇾 Paraguayo · Madrid · FP DAM · Java, SQL e IA.">
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/250408943?v=4">
+  <meta property="og:locale" content="es_ES">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&gt;_</text></svg>">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="progress" id="progress" aria-hidden="true"><span></span></div>
+  <div class="spotlight" id="spotlight" aria-hidden="true"></div>
+
+  <header class="topbar" id="topbar">
+    <a class="brand" href="#inicio"><span class="prompt">ivan@vera</span><span class="path">:~$</span></a>
+
+    <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="menu" id="menu" aria-label="Navegación principal">
+      <span class="pill" id="pill" aria-hidden="true"></span>
+      <a href="#inicio" class="active">Inicio</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#stack">Stack</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#instagram">Instagram</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ============ 1. HERO ============ -->
+    <section class="hero" id="inicio">
+      <div class="aurora" id="aurora" aria-hidden="true">
+        <span class="blob b1"></span>
+        <span class="blob b2"></span>
+        <span class="blob b3"></span>
+      </div>
+      <div class="rain" id="rain" aria-hidden="true"></div>
+      <div class="grid-overlay" aria-hidden="true"></div>
+
+      <div class="hero-inner">
+        <p class="kicker reveal"><span class="dot"></span> Disponible para proyectos — Madrid, ES</p>
+
+        <h1 class="name glitch reveal" data-text="Ivan Vera">
+          <span id="typed"></span><span class="caret" aria-hidden="true">▊</span>
+        </h1>
+
+        <p class="lede reveal">
+          27 años · 🇵🇾 Paraguayo · FP DAM.<br>
+          Aprendiendo <b>Java</b>, <b>SQL</b> y uso de <b>IA</b> — construyo proyectos con <b>Claude</b> a mi lado.
+        </p>
+
+        <div class="cta reveal">
+          <a class="btn btn-primary" href="#proyectos">./ver_proyectos</a>
+          <a class="btn btn-ghost" href="#contacto">Contactar ↗</a>
+        </div>
+
+        <dl class="stats reveal">
+          <div><dt data-count="27">0</dt><dd>Años</dd></div>
+          <div><dt data-count="7">0</dt><dd>Proyectos</dd></div>
+          <div><dt data-count="4">0</dt><dd>Publicaciones</dd></div>
+          <div><dt data-count="3">0</dt><dd>Lenguajes</dd></div>
+        </dl>
+      </div>
+
+      <a class="scroll-hint" href="#sobre-mi" aria-label="Bajar al siguiente apartado">
+        <span>scroll</span><i></i>
+      </a>
+    </section>
+
+    <!-- ============ 2. SOBRE MÍ ============ -->
+    <section class="section" id="sobre-mi">
+      <div class="wrap">
+        <p class="sec-tag reveal"><span>01</span> / sobre mí</p>
+        <h2 class="sec-title reveal">Quién hay detrás<br>del terminal</h2>
+
+        <div class="about-grid">
+          <figure class="avatar-card reveal">
+            <div class="avatar-frame">
+              <img src="https://avatars.githubusercontent.com/u/250408943?v=4"
+                   alt="Foto de perfil de Iván Vera" width="240" height="240" loading="lazy">
+            </div>
+            <figcaption>
+              <b>Iván Vera</b>
+              <a href="https://github.com/ivan99vera1-wq" target="_blank" rel="noopener">@ivan99vera1-wq</a>
+            </figcaption>
+          </figure>
+
+          <div class="about-body reveal">
+            <p>
+              Soy <b>Iván</b>, tengo 27 años, nací en 🇵🇾 <b>Paraguay</b> y vivo en <b>Madrid</b>.
+              Estoy cursando el <b>Grado Superior en Desarrollo de Aplicaciones Multiplataforma (FP DAM)</b>
+              y escribo mis primeros programas en <b>Java</b>.
+            </p>
+            <p>
+              Me interesa entender cómo funciona todo por dentro: variables, tipos de datos,
+              flujos de entrada… y también cómo la <b>inteligencia artificial</b> acelera el
+              aprendizaje. Uso <b>Claude</b> como compañero de proyectos para diseñar, revisar
+              y entender cada línea de código.
+            </p>
+
+            <ul class="facts">
+              <li><span>Edad</span><b>27 años</b></li>
+              <li><span>Nacionalidad</span><b>Paraguayo 🇵🇾</b></li>
+              <li><span>Vivo en</span><b>Madrid, España</b></li>
+              <li><span>Estudios</span><b>FP DAM</b></li>
+              <li><span>Enfoque</span><b>Java · SQL · IA</b></li>
+              <li><span>Idiomas</span><b>ES · GU (guaraní)</b></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 3. STACK ============ -->
+    <section class="section alt" id="stack">
+      <div class="wrap">
+        <p class="sec-tag reveal"><span>02</span> / stack &amp; ia</p>
+        <h2 class="sec-title reveal">Lo que estoy aprendiendo</h2>
+
+        <div class="stack-grid">
+          <div class="skill reveal">
+            <div class="skill-top"><b>Java</b><span>OOP · consola · POO</span></div>
+            <div class="bar"><i data-level="78"></i></div>
+          </div>
+          <div class="skill reveal">
+            <div class="skill-top"><b>SQL</b><span>consultas · bases de datos</span></div>
+            <div class="bar"><i data-level="55"></i></div>
+          </div>
+          <div class="skill reveal">
+            <div class="skill-top"><b>TypeScript</b><span>Next.js · web</span></div>
+            <div class="bar"><i data-level="50"></i></div>
+          </div>
+          <div class="skill reveal">
+            <div class="skill-top"><b>HTML / CSS</b><span>estructura · layout</span></div>
+            <div class="bar"><i data-level="60"></i></div>
+          </div>
+        </div>
+
+        <div class="ai-card reveal">
+          <div class="ai-badge">IA</div>
+          <div>
+            <h3>Uso de IA — Claude para proyectos</h3>
+            <p>
+              Integro la inteligencia artificial en mi forma de trabajar: uso <b>Claude</b> para
+              planificar, escribir, comentar y depurar código, entender documentación y convertir
+              errores en lecciones. La IA no sustituye mi aprendizaje — lo acelera.
+            </p>
+            <ul class="chips">
+              <li>Planificación de ejercicios</li>
+              <li>Code review</li>
+              <li>Explicación de errores</li>
+              <li>Documentación</li>
+              <li>Generación de proyectos web</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 4. PROYECTOS ============ -->
+    <section class="section" id="proyectos">
+      <div class="wrap">
+        <p class="sec-tag reveal"><span>03</span> / proyectos</p>
+        <h2 class="sec-title reveal">5 ejercicios de Java<br><span class="dim">+ 2 webs en TypeScript</span></h2>
+
+        <div class="projects-grid" id="projects-grid">
+
+          <article class="proj tilt reveal" data-lang="java">
+            <header><span class="idx">01</span><span class="badge">Java</span></header>
+            <h3>Hola Mundo</h3>
+            <p>El primer programa: imprime mi nombre y mi propósito de aprendizaje en consola.</p>
+            <pre><code>System.out.println("Hola, Me llamo Ivan");
+System.out.println("Estoy aprendiendo Java");</code></pre>
+            <a class="repo" href="https://github.com/ivan99vera1-wq/Ejercicio1-HolaMundo" target="_blank" rel="noopener">Ver repo ↗</a>
+          </article>
+
+          <article class="proj tilt reveal" data-lang="java">
+            <header><span class="idx">02</span><span class="badge">Java</span></header>
+            <h3>Variables</h3>
+            <p>Tipos de datos <code>String</code>, <code>int</code> y <code>double</code>, y concatenación de texto.</p>
+            <pre><code>String ciudad = "Madrid";
+int edad = 27;
+double altura = 1.79;</code></pre>
+            <a class="repo" href="https://github.com/ivan99vera1-wq/Ejercicio2-Variables" target="_blank" rel="noopener">Ver repo ↗</a>
+          </article>
+
+          <article class="proj tilt reveal" data-lang="java">
+            <header><span class="idx">03</span><span class="badge">Java</span></header>
+            <h3>Sumar</h3>
+            <p>Operadores aritméticos: almaceno dos números y muestro el resultado de la suma.</p>
+            <pre><code>int numero1 = 15, numero2 = 7;
+int resultado = numero1 + numero2;</code></pre>
+            <a class="repo" href="https://github.com/ivan99vera1-wq/Ejercicio3-Sumar" target="_blank" rel="noopener">Ver repo ↗</a>
+          </article>
+
+          <article class="proj tilt reveal" data-lang="java">
+            <header><span class="idx">04</span><span class="badge">Java</span></header>
+            <h3>Calculadora</h3>
+            <p>Las cuatro operaciones básicas sobre los mismos números: suma, resta, multiplicación y división.</p>
+            <pre><code>int suma = numero1 + numero2;
+int division = numero1 / numero2;</code></pre>
+            <a class="repo" href="https://github.com/ivan99vera1-wq/Ejercicio4-Calculadora" target="_blank" rel="noopener">Ver repo ↗</a>
+          </article>
+
+          <article class="proj tilt reveal" data-lang="java">
+            <header><span class="idx">05</span><span class="badge">Java</span></header>
+            <h3>Info de usuario</h3>
+            <p>Entrada de teclado con <code>java.util.Scanner</code>: leo un nombre y respondo con un saludo.</p>
+            <pre><code>Scanner scanner = new Scanner(System.in);
+String nombre = scanner.nextLine();</code></pre>
+            <a class="repo" href="https://github.com/ivan99vera1-wq/Ejercicio5-Info-de-usuario" target="_blank" rel="noopener">Ver repo ↗</a>
+          </article>
+
+          <article class="proj tilt reveal" data-lang="ts">
+            <header><span class="idx">06</span><span class="badge ts">TypeScript</span></header>
+            <h3>Servitek-web</h3>
+            <p>Sitio corporativo de SERVITEK E.A.S., electromecánica industrial en Paraguay. Next.js 14, TypeScript estricto, Tailwind y CI con GitHub Actions.</p>
+            <pre><code>next build → out/ → Cloudflare Pages</code></pre>
+            <a class="repo" href="https://github.com/ivan99vera1-wq/servitek-web" target="_blank" rel="noopener">Ver repo ↗</a>
+          </article>
+
+          <article class="proj tilt reveal" data-lang="ts">
+            <header><span class="idx">07</span><span class="badge ts">TypeScript</span></header>
+            <h3>Solca Decoraciones</h3>
+            <p>Web para una empresa de decoraciones en Paraguay. Ya publicada y en línea.</p>
+            <pre><code>deploy → vercel.app</code></pre>
+            <div class="repo-row">
+              <a class="repo" href="https://github.com/ivan99vera1-wq/Solca-decoraciones" target="_blank" rel="noopener">Ver repo ↗</a>
+              <a class="repo live" href="https://solca-decoraciones.vercel.app" target="_blank" rel="noopener">Sitio en vivo ↗</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 5. INSTAGRAM ============ -->
+    <section class="section alt" id="instagram">
+      <div class="wrap">
+        <p class="sec-tag reveal"><span>04</span> / instagram</p>
+        <h2 class="sec-title reveal">Mis publicaciones</h2>
+        <p class="sec-sub reveal">Los 4 últimos posts de <a href="https://www.instagram.com/ivanvera7_/" target="_blank" rel="noopener">@ivanvera7_</a> incrustados oficialmente.</p>
+
+        <div class="ig-grid">
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DZABMcmDMod/" data-instgrm-version="14">
+            <a href="https://www.instagram.com/p/DZABMcmDMod/" target="_blank" rel="noopener">Ver publicación en Instagram ↗</a>
+          </blockquote>
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DYuS2Z0DNT6/" data-instgrm-version="14">
+            <a href="https://www.instagram.com/p/DYuS2Z0DNT6/" target="_blank" rel="noopener">Ver publicación en Instagram ↗</a>
+          </blockquote>
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DYnQLQWjIQT/" data-instgrm-version="14">
+            <a href="https://www.instagram.com/p/DYnQLQWjIQT/" target="_blank" rel="noopener">Ver publicación en Instagram ↗</a>
+          </blockquote>
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DVzHhs7jGHE/" data-instgrm-version="14">
+            <a href="https://www.instagram.com/p/DVzHhs7jGHE/" target="_blank" rel="noopener">Ver publicación en Instagram ↗</a>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 6. CONTACTO ============ -->
+    <section class="section contact" id="contacto">
+      <div class="aurora aurora-2" aria-hidden="true">
+        <span class="blob b1"></span>
+        <span class="blob b3"></span>
+      </div>
+      <div class="wrap">
+        <p class="sec-tag reveal"><span>05</span> / contacto</p>
+        <h2 class="sec-title reveal">¿Hablamos?</h2>
+        <p class="sec-sub reveal">Escríbeme por cualquiera de estos canales.</p>
+
+        <div class="contact-grid">
+          <a class="cc reveal" href="mailto:ivan99vera1@gmail.com">
+            <span class="cc-ico">@</span>
+            <span><small>Email</small><b>ivan99vera1@gmail.com</b></span>
+          </a>
+          <a class="cc reveal" href="https://wa.me/34683224002" target="_blank" rel="noopener">
+            <span class="cc-ico">☎</span>
+            <span><small>WhatsApp</small><b>683 224 002</b></span>
+          </a>
+          <a class="cc reveal" href="https://www.instagram.com/ivanvera7_/" target="_blank" rel="noopener">
+            <span class="cc-ico">◉</span>
+            <span><small>Instagram</small><b>@ivanvera7_</b></span>
+          </a>
+          <a class="cc reveal" href="https://github.com/ivan99vera1-wq" target="_blank" rel="noopener">
+            <span class="cc-ico">&lt;/&gt;</span>
+            <span><small>GitHub</small><b>@ivan99vera1-wq</b></span>
+          </a>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <p><span class="prompt">ivan@vera</span>:~$ <span class="dim">exit</span></p>
+        <p class="dim">© 2026 Iván Vera · Madrid · Hecho con HTML, CSS, JS y Claude.</p>
+      </footer>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+  <script async src="https://www.instagram.com/embed.js"></script>
+</body>
+</html>
