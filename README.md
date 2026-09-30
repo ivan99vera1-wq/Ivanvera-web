@@ -2,9 +2,9 @@
 
 # Iván Vera — Web personal
 
-**Portafolio personal con estética terminal / dev oscuro, animaciones propias y cero dependencias.**
+**Portafolio personal con la gramática de una documentación de referencia: prosa a la izquierda, código real a la derecha. Cero dependencias.**
 
-[![Web en vivo](https://img.shields.io/badge/web-en%20línea-3fb950?style=flat-square)](https://ivanvera7.github.io/Ivanvera-web/)
+[![Web en vivo](https://img.shields.io/badge/web-en%20línea-4cc38a?style=flat-square)](https://ivanvera7.github.io/Ivanvera-web/)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=fff)](https://developer.mozilla.org/es/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=fff)](https://developer.mozilla.org/es/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=000)](https://developer.mozilla.org/es/docs/Web/JavaScript)
@@ -13,7 +13,7 @@
 
 <br>
 
-**[Web en vivo](https://ivanvera7.github.io/Ivanvera-web/)** · **[Instagram](https://www.instagram.com/ivanvera7_/)** · **[GitHub](https://github.com/ivanvera7)** · **[Email](mailto:ivan99vera1@gmail.com)**
+**[Web en vivo](https://ivanvera7.github.io/Ivanvera-web/)** · **[LinkedIn](https://www.linkedin.com/in/ivanvera7/)** · **[Instagram](https://www.instagram.com/ivanvera7_/)** · **[GitHub](https://github.com/ivanvera7)** · **[Email](mailto:ivan99vera1@gmail.com)**
 
 <img src="docs/preview.jpg" alt="Vista previa de la web personal de Iván Vera" width="900">
 
@@ -36,34 +36,32 @@ incrustado y vías de contacto directo.
 
 | Área | Detalle |
 | --- | --- |
-| **Diseño** | Tema oscuro tipo terminal con fondo aurora animado, rejilla, lluvia de código y tipografía monoespaciada. |
-| **Animaciones** | 10 efectos escritos a mano en vanilla JS (ver abajo), sin librerías de animación. |
-| **Carrusel de stack** | Tira infinita de logos (Java, SQL, TypeScript, HTML/CSS, Claude, ChatGPT, opencode, GitHub, IntelliJ) que **se pausa al pasar el ratón**; cada ficha se eleva, se ilumina y recupera su color a plena saturación. |
-| **Responsive** | Diseño fluido con puntos de corte en `760px` y `480px`; menú hamburguesa en móvil. |
-| **Accesibilidad** | HTML semántico, `aria-*` en la navegación y en el carrusel, soporte completo de `prefers-reduced-motion` (desactiva lluvia, reveal, tilt, carrusel y transiciones). |
+| **Diseño** | Fondo oscuro con un único acento verde. Tipografías autoalojadas: **Hubot Sans** (de GitHub) y **JetBrains Mono** (de IntelliJ). Sistema documentado en [`DESIGN.md`](DESIGN.md). |
+| **Paneles de código** | Todo el código mostrado es real, sacado de mis repos, con resaltado de sintaxis propio y números de línea. |
+| **Interacción** | El programa de *Variables* del hero se ejecuta y muestra su salida; los 5 ejercicios de Java se exploran como pestañas; botones para copiar el email y los datos. |
+| **Proyectos** | Capturas reales de las dos webs publicadas (Servitek y Solca). |
+| **Responsive** | Un único módulo prosa \| panel que pasa a una columna en `900px`; menú desplegable en `760px`; ajustes finos en `560px`. |
+| **Accesibilidad** | HTML semántico, contraste AA, *skip link*, foco visible, pestañas ARIA con teclado, menú móvil con Esc, contenido legible sin JavaScript y soporte de `prefers-reduced-motion`. |
 | **SEO / Social** | `title`, `meta description`, `theme-color`, Open Graph y Twitter Card, favicon + apple-touch-icon. |
 | **Rendimiento** | Imágenes optimizadas y con `loading="lazy"`, sin librerías externas, CSS y JS sin procesar. |
 
-### Animaciones incluidas
+### Movimiento
 
-1. Lluvia de código tras el hero
-2. Máquina de escribir en el nombre
-3. Glitch periódico en el nombre
-4. Reveal al entrar en pantalla (en cascada con `IntersectionObserver`)
-5. Contadores de 0 al valor
-6. Barras de *skills* que se rellenan
-7. Barra de progreso de scroll
-8. Navegación con píldora deslizante + *scrollspy* + hamburguesa
-9. *Spotlight* que sigue al cursor
-10. Tarjetas 3D con inclinación al pasar el ratón
+1. **Fondo de programación**: rejilla de puntos, fragmentos de mi código real cayendo en tres profundidades (canvas) y una luz verde que sigue al cursor.
+2. **Máquina de escribir** en el nombre y luz aurora suave en el hero.
+3. **Programas ejecutables**: el hero y los 5 ejercicios de Java escriben `java Main.java` y muestran su salida real; el de `Scanner` te pide el nombre y te saluda.
+4. Títulos que aparecen letra a letra y bloques que entran al hacer scroll.
+5. Barras de nivel con contador, barra de progreso de lectura y subrayado del menú con *scrollspy*.
+6. Capturas de proyectos con inclinación 3D y reflejo que sigue al ratón.
+7. Microinteracciones: pulsación de botones, flechas externas, confirmación de «Copiado».
 
-> Todos los efectos se desactivan automáticamente si el sistema declara
-> «movimiento reducido» o si el dispositivo no tiene puntero fino.
+> El fondo se pausa con la pestaña oculta y va a 30 fps en móvil. Con
+> «movimiento reducido» no hay desplazamientos: todo aparece ya completo.
 
 <div align="center">
-<img src="docs/preview-stack.jpg" alt="Apartado 02 Stack e IA con el carrusel de logos" width="900">
+<img src="docs/preview-stack.jpg" alt="Apartado de proyectos con las capturas de Servitek y Solca" width="900">
 <br>
-<sub>Apartado 02 · Stack & IA, con el carrusel de iconos</sub>
+<sub>Proyectos · capturas reales de las webs publicadas</sub>
 </div>
 
 ## 📁 Estructura
@@ -71,18 +69,23 @@ incrustado y vías de contacto directo.
 ```text
 Ivanvera-web/
 ├── index.html          # Estructura y todos los contenidos
-├── styles.css          # Diseño, tema, keyframes y responsive
-├── script.js           # Las 10 animaciones + el carrusel (IIFE, vanilla JS)
+├── styles.css          # Sistema visual, componentes y responsive
+├── script.js           # Resaltado, ejecución del hero, pestañas, copiar, nav (IIFE, vanilla JS)
+├── PRODUCT.md          # A quién va dirigida la web y qué no se debe inventar
+├── DESIGN.md           # Sistema de diseño (tokens, tipografía, componentes)
 ├── assets/
 │   ├── avatar.jpg      # Foto de perfil (también usada como og:image)
-│   └── logos/          # 10 SVG del carrusel de stack
+│   ├── fonts/          # Hubot Sans y JetBrains Mono (woff2 + licencias OFL)
+│   ├── projects/       # Capturas de Servitek y Solca
+│   └── logos/          # SVG de las herramientas del stack
 ├── favicon/
-│   ├── favicon.png             # Icono de pestaña (512×512, ~79 KB)
-│   ├── apple-touch-icon.png    # Icono para iOS (180×180, ~13 KB)
-│   └── logo.png                 # Fuente original del icono (1254×1254)
+│   ├── favicon.svg             # Icono de pestaña (vectorial)
+│   ├── favicon-32.png          # Respaldo PNG 32×32
+│   ├── favicon.png             # Versión grande (512×512)
+│   └── apple-touch-icon.png    # Icono para iOS (180×180)
 ├── docs/
 │   ├── preview.jpg             # Captura del hero (este README)
-│   ├── preview-stack.jpg       # Captura del apartado 02
+│   ├── preview-stack.jpg       # Captura del apartado de proyectos
 │   └── superpowers/specs/      # Especificación de diseño
 └── .gitignore
 ```
@@ -90,20 +93,21 @@ Ivanvera-web/
 ## 🛠 Stack
 
 - **HTML5** semántico
-- **CSS3**: variables, grid/flex, `clamp()`, *backdrop-filter*, keyframes, máscaras
+- **CSS3**: variables, grid/flex, `clamp()`, fuentes variables (peso y anchura), `@font-face` autoalojado
 - **JavaScript ES6+** sin dependencias (DOM, `IntersectionObserver`, `requestAnimationFrame`)
 - **Embeds oficiales de Instagram** (`instagram.com/embed.js`)
 
 ### Iconos y favicon
 
-- **Logos del carrusel**: [Devicon](https://devicon.dev/), [Simple Icons](https://simpleicons.org/), [Lucide](https://lucide.dev/) y el SVG oficial de opencode — servidos como archivos locales en `assets/logos/` (la web no hace peticiones a CDNs en tiempo de ejecución).
-- **Favicon**: icono de terminal neón generado a partir de `favicon/logo.png`.
+- **Logos del stack**: [Devicon](https://devicon.dev/), [Simple Icons](https://simpleicons.org/), [Lucide](https://lucide.dev/) y el SVG oficial de opencode — servidos como archivos locales en `assets/logos/` (la web no hace peticiones a CDNs en tiempo de ejecución).
+- **Favicon**: `>` y el bloque verde del logo sobre una pieza oscura, dibujado en SVG (`favicon/favicon.svg`) con la paleta de la web.
 
 | Archivo | Uso | Tamaño |
 | --- | --- | --- |
-| `favicon/favicon.png` | Icono de pestaña (`rel="icon"`) | 512×512 · ~79 KB |
-| `favicon/apple-touch-icon.png` | Icono táctil en iOS | 180×180 · ~13 KB |
-| `favicon/logo.png` | Fuente original en alta resolución | 1254×1254 · ~1,1 MB |
+| `favicon/favicon.svg` | Icono de pestaña principal (`rel="icon"`, vectorial) | < 1 KB |
+| `favicon/favicon-32.png` | Respaldo para navegadores sin SVG | 32×32 |
+| `favicon/favicon.png` | Versión grande del icono | 512×512 · ~12 KB |
+| `favicon/apple-touch-icon.png` | Icono táctil en iOS (sin esquinas: iOS las redondea) | 180×180 |
 
 ## 🚀 Ejecutar en local
 
@@ -153,16 +157,17 @@ GitHub Pages reconstruye el sitio automáticamente (1–2 minutos).
 | Qué cambiar | Dónde |
 | --- | --- |
 | Textos, proyectos, enlaces y embeds | `index.html` |
-| Colores, tipografía y animación CSS | `styles.css` → bloque `:root` |
+| Colores, tipografía y animación CSS | `styles.css` → bloque `:root` (documentado en `DESIGN.md`) |
 | Comportamiento de las animaciones | `script.js` |
 | Foto de perfil | `assets/avatar.jpg` (misma usada en `og:image`) |
-| Logos del carrusel | `assets/logos/*.svg` (la fila se clona sola en `script.js`) |
-| Favicon | `favicon/logo.png` → regenerar `favicon/favicon.png` y `favicon/apple-touch-icon.png` |
-| Contacto (email / WhatsApp / Instagram / GitHub) | `index.html` → sección `#contacto` |
+| Logos del stack | `assets/logos/*.svg` (lista en `index.html` → `.tools`) |
+| Favicon | `favicon/favicon.svg` → regenerar los PNG de `favicon/` a partir de él |
+| Contacto (email / LinkedIn / WhatsApp / Instagram / GitHub) | `index.html` → sección `#contacto` |
 
 ## 📬 Contacto
 
 - **Email:** [ivan99vera1@gmail.com](mailto:ivan99vera1@gmail.com)
+- **LinkedIn:** [in/ivanvera7](https://www.linkedin.com/in/ivanvera7/)
 - **WhatsApp:** [+34 683 224 002](https://wa.me/34683224002)
 - **Instagram:** [@ivanvera7_](https://www.instagram.com/ivanvera7_/)
 - **GitHub:** [@ivanvera7](https://github.com/ivanvera7)

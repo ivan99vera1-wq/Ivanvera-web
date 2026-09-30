@@ -5,103 +5,123 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ivan Vera — FP DAM · Java · IA</title>
   <meta name="description" content="Iván Vera, 27 años, paraguayo en Madrid. Estudiante de FP DAM, desarrollo en Java y SQL, uso de IA y Claude para proyectos. Portafolio, proyectos y contacto.">
-  <meta name="theme-color" content="#0d1117">
+  <meta name="theme-color" content="#0b0d10">
+  <meta name="color-scheme" content="dark">
   <meta property="og:type" content="profile">
   <meta property="og:title" content="Ivan Vera — FP DAM · Java · IA">
-  <meta property="og:description" content="27 años · 🇵🇾 Paraguayo · Madrid · FP DAM · Java, SQL e IA.">
+  <meta property="og:description" content="27 años · Paraguayo · Madrid · FP DAM · Java, SQL e IA.">
   <meta property="og:image" content="https://ivanvera7.github.io/Ivanvera-web/assets/avatar.jpg">
   <meta property="og:locale" content="es_ES">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="favicon/favicon.png" type="image/png">
+  <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon/favicon-32.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/hubot-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/jetbrains-mono.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
 
-  <div class="progress" id="progress" aria-hidden="true"><span></span></div>
-  <div class="spotlight" id="spotlight" aria-hidden="true"></div>
+  <a class="skip" href="#sobre-mi">Saltar al contenido</a>
+
+  <div class="bg" aria-hidden="true">
+    <div class="bg-grid"></div>
+    <canvas class="bg-code" id="bgCode"></canvas>
+    <div class="bg-glow" id="bgGlow"></div>
+  </div>
+  <div class="progress" aria-hidden="true"><span id="progress"></span></div>
 
   <header class="topbar" id="topbar">
-    <a class="brand" href="#inicio"><span class="prompt">ivan@vera</span><span class="path">:~$</span></a>
+    <div class="topbar-inner">
+      <a class="brand" href="#inicio" aria-label="Ivan Vera — inicio">
+        <span class="brand-mark" aria-hidden="true"></span>Ivan Vera<span class="brand-sub">FP DAM</span>
+      </a>
 
-    <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
-      <span></span><span></span><span></span>
-    </button>
+      <button class="burger" id="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span>
+      </button>
 
-    <nav class="menu" id="menu" aria-label="Navegación principal">
-      <span class="pill" id="pill" aria-hidden="true"></span>
-      <a href="#inicio" class="active">Inicio</a>
-      <a href="#sobre-mi">Sobre mí</a>
-      <a href="#stack">Stack</a>
-      <a href="#proyectos">Proyectos</a>
-      <a href="#instagram">Instagram</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
+      <nav class="menu" id="menu" aria-label="Navegación principal">
+        <span class="menu-line" id="menuLine" aria-hidden="true"></span>
+        <a href="#inicio" class="active" aria-current="true">Inicio</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#stack">Stack</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#instagram">Instagram</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
   </header>
 
   <main>
 
     <!-- ============ 1. HERO ============ -->
     <section class="hero" id="inicio">
-      <div class="aurora" id="aurora" aria-hidden="true">
-        <span class="blob b1"></span>
-        <span class="blob b2"></span>
-        <span class="blob b3"></span>
-      </div>
-      <div class="rain" id="rain" aria-hidden="true"></div>
-      <div class="grid-overlay" aria-hidden="true"></div>
-
-      <div class="hero-inner">
-        <p class="kicker reveal"><span class="dot"></span> Disponible para proyectos — Madrid, ES</p>
-
-        <h1 class="name glitch reveal" data-text="Ivan Vera">
-          <span id="typed"></span><span class="caret" aria-hidden="true">▊</span>
-        </h1>
-
-        <p class="lede reveal">
-          27 años · 🇵🇾 Paraguayo · FP DAM.<br>
-          Formación en Desarrollo de Aplicaciones Multiplataforma, con foco en <b>Java</b>, <b>SQL</b> y tecnologías emergentes (<b>IA</b>).
-        </p>
-
-        <div class="cta reveal">
-          <a class="btn btn-primary" href="#proyectos">./ver_proyectos</a>
-          <a class="btn btn-ghost" href="#contacto">Contactar ↗</a>
+      <div class="hero-light" aria-hidden="true"><span></span><span></span></div>
+      <div class="wrap split split--hero">
+        <div class="hero-copy">
+          <h1 class="hero-name" aria-label="Ivan Vera"><span id="typed" aria-hidden="true">Ivan Vera</span><span class="caret" aria-hidden="true"></span></h1>
+          <p class="lede" data-enter>
+            27 años, paraguayo, en Madrid. Estudio Desarrollo de Aplicaciones Multiplataforma (FP DAM)
+            con foco en <b>Java</b>, <b>SQL</b> y tecnologías emergentes como la <b>IA</b>.
+          </p>
+          <div class="cta" data-enter>
+            <a class="btn btn-primary" href="#proyectos">Ver proyectos</a>
+            <a class="btn btn-ghost" href="#contacto">Contactar</a>
+          </div>
+          <p class="status" data-enter><span class="status-dot" aria-hidden="true"></span>Disponible para proyectos · Madrid, ES</p>
         </div>
 
-        <dl class="stats reveal">
-          <div><dt data-count="27">0</dt><dd>Años</dd></div>
-          <div><dt data-count="7">0</dt><dd>Proyectos</dd></div>
-          <div><dt data-count="4">0</dt><dd>Publicaciones</dd></div>
-          <div><dt data-count="3">0</dt><dd>Lenguajes</dd></div>
-        </dl>
-      </div>
+        <figure class="panel panel--hero" data-enter aria-label="Ejercicio de Variables en Java y su salida por consola">
+          <div class="panel-bar">
+            <span class="panel-file">Main.java</span>
+            <span class="panel-path">Ejercicio2-Variables</span>
+            <button class="panel-btn run" id="runBtn" type="button">
+              <svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path d="M4.5 2.8v10.4a.6.6 0 0 0 .9.5l8.2-5.2a.6.6 0 0 0 0-1L5.4 2.3a.6.6 0 0 0-.9.5Z" fill="currentColor"/></svg>
+              Ejecutar
+            </button>
+          </div>
+<pre class="panel-code"><code data-lang="java">// Variables
+String nombre = "Ivan";
+String ciudad = "Madrid";
+int edad = 27;
+double altura = 1.79;
 
-      <a class="scroll-hint" href="#sobre-mi" aria-label="Bajar al siguiente apartado">
-        <span>scroll</span><i></i>
-      </a>
+// Mostrar en Pantalla
+System.out.println("Me llamo " + nombre);
+System.out.println("Tengo " + edad + " años");
+System.out.println("Vivo en " + ciudad);
+System.out.println("Mido " + altura + " metros");</code></pre>
+          <div class="console">
+            <div class="console-bar">Terminal</div>
+            <pre class="console-out" id="consoleOut" aria-live="polite"><span class="c-cmd"><span class="c-prompt">$</span> java Main.java</span>
+<span class="c-line">Me llamo Ivan</span>
+<span class="c-line">Tengo 27 años</span>
+<span class="c-line">Vivo en Madrid</span>
+<span class="c-line">Mido 1.79 metros</span></pre>
+          </div>
+        </figure>
+      </div>
     </section>
 
     <!-- ============ 2. SOBRE MÍ ============ -->
     <section class="section" id="sobre-mi">
-      <div class="wrap">
-        <p class="sec-tag reveal"><span>01</span> / sobre mí</p>
-        <h2 class="sec-title reveal">Quién hay detrás<br>del terminal</h2>
+      <div class="wrap split">
+        <div class="prose">
+          <h2 class="sec-title reveal">Quién hay detrás del terminal</h2>
 
-        <div class="about-grid">
-          <figure class="avatar-card reveal">
-            <div class="avatar-frame">
-              <img src="assets/avatar.jpg"
-                   alt="Foto de perfil de Iván Vera" width="240" height="240" loading="lazy">
-            </div>
+          <figure class="portrait reveal">
+            <img src="assets/avatar.jpg" alt="Iván Vera de espaldas, con mochila, frente a un acantilado y el mar" width="512" height="512" loading="lazy">
             <figcaption>
               <b>Iván Vera</b>
               <a href="https://github.com/ivanvera7" target="_blank" rel="noopener">@ivanvera7</a>
             </figcaption>
           </figure>
 
-          <div class="about-body reveal">
+          <div class="reveal">
             <p>
-              Soy <b>Iván</b>, tengo 27 años, nací en 🇵🇾 <b>Paraguay</b> y vivo en <b>Madrid</b>.
+              Soy <b>Iván</b>, tengo 27 años, nací en <b>Paraguay</b> y vivo en <b>Madrid</b>.
               Estoy cursando el <b>Grado Superior en Desarrollo de Aplicaciones Multiplataforma (FP DAM) en Ilerna, Madrid</b>
               y escribo mis primeros programas en <b>Java</b>.
             </p>
@@ -111,72 +131,42 @@
               aprendizaje. Uso la <b>IA</b> como compañera de proyectos para diseñar, revisar
               y entender cada línea de código.
             </p>
-
-            <ul class="facts">
-              <li><span>Edad</span><b>27 años</b></li>
-              <li><span>Nacionalidad</span><b>Paraguayo 🇵🇾</b></li>
-              <li><span>Vivo en</span><b>Madrid, España</b></li>
-              <li><span>Estudios</span><b>FP DAM</b></li>
-              <li><span>Enfoque</span><b>Java · SQL · IA</b></li>
-              <li><span>Idiomas</span><b>Español · Guarani · Ingles · Portugues</b></li>
-            </ul>
           </div>
         </div>
+
+        <figure class="panel panel--sticky reveal" aria-label="Datos personales">
+          <div class="panel-bar">
+            <span class="panel-file">ivan.json</span>
+            <button class="panel-btn copy" type="button" data-copy-target="factsCode">Copiar</button>
+          </div>
+<pre class="panel-code"><code data-lang="json" id="factsCode">{
+  "nombre": "Iván Vera",
+  "edad": 27,
+  "nacionalidad": "Paraguayo",
+  "vive_en": "Madrid, España",
+  "estudios": "FP DAM · Ilerna",
+  "enfoque": ["Java", "SQL", "IA"],
+  "idiomas": ["Español", "Guaraní", "Inglés", "Portugués"]
+}</code></pre>
+        </figure>
       </div>
     </section>
 
     <!-- ============ 3. STACK ============ -->
-    <section class="section alt" id="stack">
-      <div class="wrap">
-        <p class="sec-tag reveal"><span>02</span> / stack &amp; ia</p>
-        <h2 class="sec-title reveal">Lo que estoy aprendiendo</h2>
+    <section class="section section--alt" id="stack">
+      <div class="wrap split">
+        <div class="prose">
+          <h2 class="sec-title reveal">Lo que estoy aprendiendo</h2>
 
-        <div class="stack-grid">
-          <div class="skill reveal">
-            <div class="skill-top"><b>Java</b><span>OOP · consola · POO</span></div>
-            <div class="bar"><i data-level="78"></i></div>
-          </div>
-          <div class="skill reveal">
-            <div class="skill-top"><b>SQL</b><span>consultas · bases de datos</span></div>
-            <div class="bar"><i data-level="55"></i></div>
-          </div>
-          <div class="skill reveal">
-            <div class="skill-top"><b>TypeScript</b><span>Next.js · web</span></div>
-            <div class="bar"><i data-level="50"></i></div>
-          </div>
-          <div class="skill reveal">
-            <div class="skill-top"><b>HTML / CSS</b><span>estructura · layout</span></div>
-            <div class="bar"><i data-level="60"></i></div>
-          </div>
-        </div>
-
-        <div class="marquee reveal" aria-label="Tecnologías y herramientas que uso">
-          <div class="marquee-track" id="marqueeTrack">
-            <ul class="logo-row">
-              <li class="logo"><span class="logo-img"><img src="assets/logos/java.svg" alt="" width="34" height="34"></span><span>Java</span></li>
-              <li class="logo"><span class="logo-img"><img src="assets/logos/sql.svg" alt="" width="34" height="34"></span><span>SQL</span></li>
-              <li class="logo"><span class="logo-img"><img src="assets/logos/typescript.svg" alt="" width="34" height="34"></span><span>TypeScript</span></li>
-              <li class="logo"><span class="logo-img wide"><img src="assets/logos/html5.svg" alt="" width="30" height="30"><img src="assets/logos/css3.svg" alt="" width="30" height="30"></span><span>HTML / CSS</span></li>
-              <li class="logo"><span class="logo-img"><img src="assets/logos/claude.svg" alt="" width="34" height="34"></span><span>Claude</span></li>
-              <li class="logo"><span class="logo-img"><img src="assets/logos/chatgpt.svg" alt="" width="34" height="34"></span><span>ChatGPT</span></li>
-              <li class="logo"><span class="logo-img"><img src="assets/logos/opencode.svg" alt="" width="34" height="34"></span><span>opencode</span></li>
-              <li class="logo"><span class="logo-img"><img src="assets/logos/github.svg" alt="" width="34" height="34"></span><span>GitHub</span></li>
-              <li class="logo"><span class="logo-img"><img src="assets/logos/intellij.svg" alt="" width="34" height="34"></span><span>IntelliJ</span></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="ai-card reveal">
-          <div class="ai-badge"><img src="favicon/favicon.png" alt="" width="56" height="56"></div>
-          <div>
-            <h3>Uso de IA para proyectos</h3>
+          <div class="reveal">
+            <h3 class="sub-title">Uso de IA para proyectos</h3>
             <p>
               Integro la inteligencia artificial en mi forma de trabajar: uso <b>Claude</b>,
               <b>ChatGPT</b>, <b>IntelliJ</b>, <b>Visual Studio</b> y <b>opencode</b> para
               planificar, escribir, comentar y depurar código, entender documentación y convertir
               errores en lecciones. La IA no sustituye mi aprendizaje — lo acelera.
             </p>
-            <ul class="chips">
+            <ul class="uses">
               <li>Planificación de ejercicios</li>
               <li>Code review</li>
               <li>Explicación de errores</li>
@@ -185,147 +175,345 @@
             </ul>
           </div>
         </div>
+
+        <figure class="panel panel--sticky reveal" aria-label="Nivel actual por lenguaje, autoevaluación">
+          <div class="panel-bar">
+            <span class="panel-file">nivel.txt</span>
+            <span class="panel-path">autoevaluación</span>
+          </div>
+          <ul class="skills">
+            <li class="skill">
+              <div class="skill-top"><b>Java</b><span>OOP · consola · POO</span><em>78</em></div>
+              <div class="meter"><i style="--p:.78"></i></div>
+            </li>
+            <li class="skill">
+              <div class="skill-top"><b>SQL</b><span>consultas · bases de datos</span><em>55</em></div>
+              <div class="meter"><i style="--p:.55"></i></div>
+            </li>
+            <li class="skill">
+              <div class="skill-top"><b>TypeScript</b><span>Next.js · web</span><em>50</em></div>
+              <div class="meter"><i style="--p:.50"></i></div>
+            </li>
+            <li class="skill">
+              <div class="skill-top"><b>HTML / CSS</b><span>estructura · layout</span><em>60</em></div>
+              <div class="meter"><i style="--p:.60"></i></div>
+            </li>
+          </ul>
+        </figure>
+      </div>
+
+      <div class="wrap">
+        <ul class="tools reveal" aria-label="Tecnologías y herramientas que uso">
+          <li><img src="assets/logos/java.svg" alt="" width="28" height="28">Java</li>
+          <li><img src="assets/logos/sql.svg" alt="" width="28" height="28">SQL</li>
+          <li><img src="assets/logos/typescript.svg" alt="" width="28" height="28">TypeScript</li>
+          <li><span class="tool-pair"><img src="assets/logos/html5.svg" alt="" width="24" height="24"><img src="assets/logos/css3.svg" alt="" width="24" height="24"></span>HTML / CSS</li>
+          <li><img src="assets/logos/claude.svg" alt="" width="28" height="28">Claude</li>
+          <li><img src="assets/logos/chatgpt.svg" alt="" width="28" height="28">ChatGPT</li>
+          <li><img src="assets/logos/opencode.svg" alt="" width="28" height="28">opencode</li>
+          <li><img src="assets/logos/github.svg" alt="" width="28" height="28">GitHub</li>
+          <li><img src="assets/logos/intellij.svg" alt="" width="28" height="28">IntelliJ</li>
+        </ul>
       </div>
     </section>
 
     <!-- ============ 4. PROYECTOS ============ -->
     <section class="section" id="proyectos">
       <div class="wrap">
-        <p class="sec-tag reveal"><span>03</span> / proyectos</p>
-        <h2 class="sec-title reveal">5 ejercicios de Java<br><span class="dim">+ 2 webs en TypeScript</span></h2>
+        <h2 class="sec-title reveal">2 webs en TypeScript<br><span class="dim">+ 5 ejercicios de Java</span></h2>
+      </div>
 
-        <div class="projects-grid" id="projects-grid">
+      <!-- webs publicadas -->
+      <article class="wrap split project reveal">
+        <div class="prose">
+          <p class="project-meta">TypeScript · Next.js 14</p>
+          <h3 class="project-title">Servitek-web</h3>
+          <p>Sitio corporativo de SERVITEK E.A.S., electromecánica industrial en Paraguay. Next.js 14, TypeScript estricto, Tailwind y CI con GitHub Actions.</p>
+          <div class="project-links">
+            <a class="btn btn-primary btn-sm" href="https://servitek.pages.dev" target="_blank" rel="noopener">Sitio en vivo <svg class="ext" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M5 11 11 5M6.2 5H11v4.8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <a class="btn btn-ghost btn-sm" href="https://github.com/ivanvera7/servitek-web" target="_blank" rel="noopener">Ver repo</a>
+          </div>
+        </div>
+        <a class="panel panel--shot tilt" href="https://servitek.pages.dev" target="_blank" rel="noopener" aria-label="Abrir servitek.pages.dev">
+          <span class="panel-bar"><span class="panel-url">servitek.pages.dev</span><span class="panel-path">next build → out/ → Cloudflare Pages</span></span>
+          <img src="assets/projects/servitek.jpg" alt="Portada de la web de Servitek: electromecánica industrial para plantas que no pueden parar" width="1200" height="750" loading="lazy">
+        </a>
+      </article>
 
-          <article class="proj tilt reveal" data-lang="java">
-            <header><span class="idx">01</span><span class="badge">Java</span></header>
-            <h3>Hola Mundo</h3>
-            <p>El primer programa: imprime mi nombre y mi propósito de aprendizaje en consola.</p>
-            <pre><code>System.out.println("Hola, Me llamo Ivan");
-System.out.println("Estoy aprendiendo Java");</code></pre>
-            <a class="repo" href="https://github.com/ivanvera7/Ejercicio1-HolaMundo" target="_blank" rel="noopener">Ver repo ↗</a>
-          </article>
+      <article class="wrap split project reveal">
+        <div class="prose">
+          <p class="project-meta">TypeScript · Vercel</p>
+          <h3 class="project-title">Solca Decoraciones</h3>
+          <p>Web para una empresa de decoraciones en Paraguay. Ya publicada y en línea.</p>
+          <div class="project-links">
+            <a class="btn btn-primary btn-sm" href="https://solca-decoraciones.vercel.app" target="_blank" rel="noopener">Sitio en vivo <svg class="ext" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M5 11 11 5M6.2 5H11v4.8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <a class="btn btn-ghost btn-sm" href="https://github.com/ivanvera7/Solca-decoraciones" target="_blank" rel="noopener">Ver repo</a>
+          </div>
+        </div>
+        <a class="panel panel--shot tilt" href="https://solca-decoraciones.vercel.app" target="_blank" rel="noopener" aria-label="Abrir solca-decoraciones.vercel.app">
+          <span class="panel-bar"><span class="panel-url">solca-decoraciones.vercel.app</span><span class="panel-path">deploy → vercel.app</span></span>
+          <img src="assets/projects/solca.jpg" alt="Portada de la web de Solca Decoraciones: diseñamos espacios que inspiran" width="1200" height="750" loading="lazy">
+        </a>
+      </article>
 
-          <article class="proj tilt reveal" data-lang="java">
-            <header><span class="idx">02</span><span class="badge">Java</span></header>
-            <h3>Variables</h3>
-            <p>Tipos de datos <code>String</code>, <code>int</code> y <code>double</code>, y concatenación de texto.</p>
-            <pre><code>String ciudad = "Madrid";
-int edad = 27;
-double altura = 1.79;</code></pre>
-            <a class="repo" href="https://github.com/ivanvera7/Ejercicio2-Variables" target="_blank" rel="noopener">Ver repo ↗</a>
-          </article>
+      <!-- ejercicios de Java -->
+      <div class="wrap split exercises">
+        <div class="prose">
+          <h3 class="sub-title reveal">Ejercicios de Java</h3>
+          <div class="ex-list reveal" role="tablist" aria-label="Ejercicios de Java" aria-orientation="vertical">
+            <button class="ex-tab" type="button" role="tab" id="tab-ex1" aria-controls="ex1" aria-selected="true">
+              <span class="ex-idx">01</span><span class="ex-name">Hola Mundo</span>
+              <span class="ex-desc">El primer programa: imprime mi nombre y mi propósito de aprendizaje en consola.</span>
+            </button>
+            <button class="ex-tab" type="button" role="tab" id="tab-ex2" aria-controls="ex2" aria-selected="false" tabindex="-1">
+              <span class="ex-idx">02</span><span class="ex-name">Variables</span>
+              <span class="ex-desc">Tipos de datos <code>String</code>, <code>int</code> y <code>double</code>, y concatenación de texto.</span>
+            </button>
+            <button class="ex-tab" type="button" role="tab" id="tab-ex3" aria-controls="ex3" aria-selected="false" tabindex="-1">
+              <span class="ex-idx">03</span><span class="ex-name">Sumar</span>
+              <span class="ex-desc">Operadores aritméticos: almaceno dos números y muestro el resultado de la suma.</span>
+            </button>
+            <button class="ex-tab" type="button" role="tab" id="tab-ex4" aria-controls="ex4" aria-selected="false" tabindex="-1">
+              <span class="ex-idx">04</span><span class="ex-name">Calculadora</span>
+              <span class="ex-desc">Las cuatro operaciones básicas sobre los mismos números: suma, resta, multiplicación y división.</span>
+            </button>
+            <button class="ex-tab" type="button" role="tab" id="tab-ex5" aria-controls="ex5" aria-selected="false" tabindex="-1">
+              <span class="ex-idx">05</span><span class="ex-name">Info de usuario</span>
+              <span class="ex-desc">Entrada de teclado con <code>java.util.Scanner</code>: leo un nombre y respondo con un saludo.</span>
+            </button>
+          </div>
+        </div>
 
-          <article class="proj tilt reveal" data-lang="java">
-            <header><span class="idx">03</span><span class="badge">Java</span></header>
-            <h3>Sumar</h3>
-            <p>Operadores aritméticos: almaceno dos números y muestro el resultado de la suma.</p>
-            <pre><code>int numero1 = 15, numero2 = 7;
-int resultado = numero1 + numero2;</code></pre>
-            <a class="repo" href="https://github.com/ivanvera7/Ejercicio3-Sumar" target="_blank" rel="noopener">Ver repo ↗</a>
-          </article>
-
-          <article class="proj tilt reveal" data-lang="java">
-            <header><span class="idx">04</span><span class="badge">Java</span></header>
-            <h3>Calculadora</h3>
-            <p>Las cuatro operaciones básicas sobre los mismos números: suma, resta, multiplicación y división.</p>
-            <pre><code>int suma = numero1 + numero2;
-int division = numero1 / numero2;</code></pre>
-            <a class="repo" href="https://github.com/ivanvera7/Ejercicio4-Calculadora" target="_blank" rel="noopener">Ver repo ↗</a>
-          </article>
-
-          <article class="proj tilt reveal" data-lang="java">
-            <header><span class="idx">05</span><span class="badge">Java</span></header>
-            <h3>Info de usuario</h3>
-            <p>Entrada de teclado con <code>java.util.Scanner</code>: leo un nombre y respondo con un saludo.</p>
-            <pre><code>Scanner scanner = new Scanner(System.in);
-String nombre = scanner.nextLine();</code></pre>
-            <a class="repo" href="https://github.com/ivanvera7/Ejercicio5-Info-de-usuario" target="_blank" rel="noopener">Ver repo ↗</a>
-          </article>
-
-          <article class="proj tilt reveal" data-lang="ts">
-            <header><span class="idx">06</span><span class="badge ts">TypeScript</span></header>
-            <h3>Servitek-web</h3>
-            <p>Sitio corporativo de SERVITEK E.A.S., electromecánica industrial en Paraguay. Next.js 14, TypeScript estricto, Tailwind y CI con GitHub Actions.</p>
-            <pre><code>next build → out/ → Cloudflare Pages</code></pre>
-            <div class="repo-row">
-              <a class="repo" href="https://github.com/ivanvera7/servitek-web" target="_blank" rel="noopener">Ver repo ↗</a>
-              <a class="repo live" href="https://servitek.pages.dev" target="_blank" rel="noopener">Sitio en vivo ↗</a>
+        <div class="panel panel--sticky panel--tabs reveal">
+          <div class="ex-panel" id="ex1" role="tabpanel" aria-labelledby="tab-ex1">
+            <div class="panel-bar">
+              <span class="panel-file">Main.java</span><span class="panel-path">Ejercicio1-HolaMundo</span>
+              <button class="panel-btn run" type="button"><svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path d="M4.5 2.8v10.4a.6.6 0 0 0 .9.5l8.2-5.2a.6.6 0 0 0 0-1L5.4 2.3a.6.6 0 0 0-.9.5Z" fill="currentColor"/></svg> Ejecutar</button>
+              <a class="panel-btn" href="https://github.com/ivanvera7/Ejercicio1-HolaMundo" target="_blank" rel="noopener">Ver repo <svg class="ext" viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path d="M5 11 11 5M6.2 5H11v4.8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
             </div>
-          </article>
-
-          <article class="proj tilt reveal" data-lang="ts">
-            <header><span class="idx">07</span><span class="badge ts">TypeScript</span></header>
-            <h3>Solca Decoraciones</h3>
-            <p>Web para una empresa de decoraciones en Paraguay. Ya publicada y en línea.</p>
-            <pre><code>deploy → vercel.app</code></pre>
-            <div class="repo-row">
-              <a class="repo" href="https://github.com/ivanvera7/Solca-decoraciones" target="_blank" rel="noopener">Ver repo ↗</a>
-              <a class="repo live" href="https://solca-decoraciones.vercel.app" target="_blank" rel="noopener">Sitio en vivo ↗</a>
+<pre class="panel-code"><code data-lang="java">public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hola , Me llamo Ivan");
+        System.out.println("Estoy aprendiendo Java");
+    }
+}</code></pre>
+            <div class="console">
+              <div class="console-bar">Terminal</div>
+              <pre class="console-out" aria-live="polite"><span class="c-cmd"><span class="c-prompt">$</span> java Main.java</span>
+<span class="c-line">Hola , Me llamo Ivan</span>
+<span class="c-line">Estoy aprendiendo Java</span></pre>
             </div>
-          </article>
+          </div>
+          <div class="ex-panel" id="ex2" role="tabpanel" aria-labelledby="tab-ex2">
+            <div class="panel-bar">
+              <span class="panel-file">Main.java</span><span class="panel-path">Ejercicio2-Variables</span>
+              <button class="panel-btn run" type="button"><svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path d="M4.5 2.8v10.4a.6.6 0 0 0 .9.5l8.2-5.2a.6.6 0 0 0 0-1L5.4 2.3a.6.6 0 0 0-.9.5Z" fill="currentColor"/></svg> Ejecutar</button>
+              <a class="panel-btn" href="https://github.com/ivanvera7/Ejercicio2-Variables" target="_blank" rel="noopener">Ver repo <svg class="ext" viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path d="M5 11 11 5M6.2 5H11v4.8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </div>
+<pre class="panel-code"><code data-lang="java">public class Main {
+    public static void main(String[] args) {
 
+        // Variables
+        String nombre = "Ivan";
+        String ciudad = "Madrid";
+        int edad = 27;
+        double altura = 1.79;
+
+        // Mostrar en Pantalla
+        System.out.println("Me llamo " + nombre);
+        System.out.println("Tengo " + edad + " años");
+        System.out.println("Vivo en " + ciudad);
+        System.out.println("Mido " + altura + " metros");
+    }
+}</code></pre>
+            <div class="console">
+              <div class="console-bar">Terminal</div>
+              <pre class="console-out" aria-live="polite"><span class="c-cmd"><span class="c-prompt">$</span> java Main.java</span>
+<span class="c-line">Me llamo Ivan</span>
+<span class="c-line">Tengo 27 años</span>
+<span class="c-line">Vivo en Madrid</span>
+<span class="c-line">Mido 1.79 metros</span></pre>
+            </div>
+          </div>
+          <div class="ex-panel" id="ex3" role="tabpanel" aria-labelledby="tab-ex3">
+            <div class="panel-bar">
+              <span class="panel-file">Main.java</span><span class="panel-path">Ejercicio3-Sumar</span>
+              <button class="panel-btn run" type="button"><svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path d="M4.5 2.8v10.4a.6.6 0 0 0 .9.5l8.2-5.2a.6.6 0 0 0 0-1L5.4 2.3a.6.6 0 0 0-.9.5Z" fill="currentColor"/></svg> Ejecutar</button>
+              <a class="panel-btn" href="https://github.com/ivanvera7/Ejercicio3-Sumar" target="_blank" rel="noopener">Ver repo <svg class="ext" viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path d="M5 11 11 5M6.2 5H11v4.8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </div>
+<pre class="panel-code"><code data-lang="java">public class Main {
+    public static void main(String[] args) {
+
+        // Variables
+        int numero1 = 15;
+        int numero2 = 7;
+        int resultado = numero1 + numero2;
+
+        // Mostrar en pantalla
+        System.out.println("Numero 1 = " + numero1);
+        System.out.println("Numero 2 = " + numero2);
+        System.out.println("la suma es = " + resultado);
+    }
+}</code></pre>
+            <div class="console">
+              <div class="console-bar">Terminal</div>
+              <pre class="console-out" aria-live="polite"><span class="c-cmd"><span class="c-prompt">$</span> java Main.java</span>
+<span class="c-line">Numero 1 = 15</span>
+<span class="c-line">Numero 2 = 7</span>
+<span class="c-line">la suma es = 22</span></pre>
+            </div>
+          </div>
+          <div class="ex-panel" id="ex4" role="tabpanel" aria-labelledby="tab-ex4">
+            <div class="panel-bar">
+              <span class="panel-file">Main.java</span><span class="panel-path">Ejercicio4-Calculadora</span>
+              <button class="panel-btn run" type="button"><svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path d="M4.5 2.8v10.4a.6.6 0 0 0 .9.5l8.2-5.2a.6.6 0 0 0 0-1L5.4 2.3a.6.6 0 0 0-.9.5Z" fill="currentColor"/></svg> Ejecutar</button>
+              <a class="panel-btn" href="https://github.com/ivanvera7/Ejercicio4-Calculadora" target="_blank" rel="noopener">Ver repo <svg class="ext" viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path d="M5 11 11 5M6.2 5H11v4.8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </div>
+<pre class="panel-code"><code data-lang="java">public class Main {
+    public static void main(String[] args) {
+
+        // Variables
+        int numero1 = 20;
+        int numero2 = 5;
+        int suma = numero1 + numero2;
+        int resta = numero1 - numero2;
+        int multiplicacion = numero1 * numero2;
+        int division = numero1 / numero2;
+
+        //mostrar en pantalla
+        System.out.println("Numero1: " + numero1);
+        System.out.println("Numero2: " + numero2);
+        System.out.println("·························");
+        System.out.println("Suma: " + suma);
+        System.out.println("Resta: " + resta);
+        System.out.println("Multiplicación: " + multiplicacion);
+        System.out.println("División: " + division);
+    }
+}</code></pre>
+            <div class="console">
+              <div class="console-bar">Terminal</div>
+              <pre class="console-out" aria-live="polite"><span class="c-cmd"><span class="c-prompt">$</span> java Main.java</span>
+<span class="c-line">Numero1: 20</span>
+<span class="c-line">Numero2: 5</span>
+<span class="c-line">·························</span>
+<span class="c-line">Suma: 25</span>
+<span class="c-line">Resta: 15</span>
+<span class="c-line">Multiplicación: 100</span>
+<span class="c-line">División: 4</span></pre>
+            </div>
+          </div>
+          <div class="ex-panel" id="ex5" role="tabpanel" aria-labelledby="tab-ex5">
+            <div class="panel-bar">
+              <span class="panel-file">Main.java</span><span class="panel-path">Ejercicio5-Info-de-usuario</span>
+              <button class="panel-btn run" type="button"><svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path d="M4.5 2.8v10.4a.6.6 0 0 0 .9.5l8.2-5.2a.6.6 0 0 0 0-1L5.4 2.3a.6.6 0 0 0-.9.5Z" fill="currentColor"/></svg> Ejecutar</button>
+              <a class="panel-btn" href="https://github.com/ivanvera7/Ejercicio5-Info-de-usuario" target="_blank" rel="noopener">Ver repo <svg class="ext" viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path d="M5 11 11 5M6.2 5H11v4.8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </div>
+<pre class="panel-code"><code data-lang="java">// Importa la clase Scanner, que sirve para leer datos del teclado
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        // Crea el objeto Scanner conectado a la entrada estándar (el teclado).
+        Scanner scanner = new Scanner(System.in);
+
+        // Imprime la pregunta en pantalla.
+        System.out.println("¿Cómo te llamas?");
+
+        // Lee lo que el usuario escribió y lo guarda en la variable nombre.
+        String nombre = scanner.nextLine();
+
+        // Une "Hola " con el valor de nombre usando +
+        System.out.println("Hola " + nombre);
+
+        //Cierra el scanner para liberar recurso
+        scanner.close();
+    }
+}</code></pre>
+            <div class="console">
+              <div class="console-bar">Terminal</div>
+              <pre class="console-out" aria-live="polite" data-interactive="true"><span class="c-cmd"><span class="c-prompt">$</span> java Main.java</span>
+<span class="c-line">¿Cómo te llamas?</span></pre>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- ============ 5. INSTAGRAM ============ -->
-    <section class="section alt" id="instagram">
+    <section class="section section--alt" id="instagram">
       <div class="wrap">
-        <p class="sec-tag reveal"><span>04</span> / instagram</p>
         <h2 class="sec-title reveal">Mis publicaciones</h2>
         <p class="sec-sub reveal">Los 4 últimos posts de <a href="https://www.instagram.com/ivanvera7_/" target="_blank" rel="noopener">@ivanvera7_</a> incrustados oficialmente.</p>
 
-        <div class="ig-grid">
+        <div class="ig-grid reveal">
           <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DZABMcmDMod/" data-instgrm-version="14">
-            <a href="https://www.instagram.com/p/DZABMcmDMod/" target="_blank" rel="noopener">Ver publicación en Instagram ↗</a>
+            <a href="https://www.instagram.com/p/DZABMcmDMod/" target="_blank" rel="noopener">Ver publicación en Instagram</a>
           </blockquote>
           <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DYuS2Z0DNT6/" data-instgrm-version="14">
-            <a href="https://www.instagram.com/p/DYuS2Z0DNT6/" target="_blank" rel="noopener">Ver publicación en Instagram ↗</a>
+            <a href="https://www.instagram.com/p/DYuS2Z0DNT6/" target="_blank" rel="noopener">Ver publicación en Instagram</a>
           </blockquote>
           <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DYnQLQWjIQT/" data-instgrm-version="14">
-            <a href="https://www.instagram.com/p/DYnQLQWjIQT/" target="_blank" rel="noopener">Ver publicación en Instagram ↗</a>
+            <a href="https://www.instagram.com/p/DYnQLQWjIQT/" target="_blank" rel="noopener">Ver publicación en Instagram</a>
           </blockquote>
           <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DVzHhs7jGHE/" data-instgrm-version="14">
-            <a href="https://www.instagram.com/p/DVzHhs7jGHE/" target="_blank" rel="noopener">Ver publicación en Instagram ↗</a>
+            <a href="https://www.instagram.com/p/DVzHhs7jGHE/" target="_blank" rel="noopener">Ver publicación en Instagram</a>
           </blockquote>
         </div>
       </div>
     </section>
 
     <!-- ============ 6. CONTACTO ============ -->
-    <section class="section contact" id="contacto">
-      <div class="aurora aurora-2" aria-hidden="true">
-        <span class="blob b1"></span>
-        <span class="blob b3"></span>
-      </div>
-      <div class="wrap">
-        <p class="sec-tag reveal"><span>05</span> / contacto</p>
-        <h2 class="sec-title reveal">¿Hablamos?</h2>
-        <p class="sec-sub reveal">Escríbeme por cualquiera de estos canales.</p>
-
-        <div class="contact-grid">
-          <a class="cc reveal" href="mailto:ivan99vera1@gmail.com">
-            <span class="cc-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span>
-            <span><small>Email</small><b>ivan99vera1@gmail.com</b></span>
-          </a>
-          <a class="cc reveal" href="https://wa.me/34683224002" target="_blank" rel="noopener">
-            <span class="cc-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg></span>
-            <span><small>WhatsApp</small><b>683 224 002</b></span>
-          </a>
-          <a class="cc reveal" href="https://www.instagram.com/ivanvera7_/" target="_blank" rel="noopener">
-            <span class="cc-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg></span>
-            <span><small>Instagram</small><b>@ivanvera7_</b></span>
-          </a>
-          <a class="cc reveal" href="https://github.com/ivanvera7" target="_blank" rel="noopener">
-            <span class="cc-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></span>
-            <span><small>GitHub</small><b>@ivanvera7</b></span>
-          </a>
+    <section class="section section--contact" id="contacto">
+      <div class="wrap split">
+        <div class="prose">
+          <h2 class="sec-title sec-title--xl reveal">¿Hablamos?</h2>
+          <p class="sec-sub reveal">Escríbeme por cualquiera de estos canales.</p>
+          <p class="status reveal"><span class="status-dot" aria-hidden="true"></span>Disponible para proyectos · Madrid, ES</p>
         </div>
+
+        <ul class="contact-list reveal">
+          <li class="cc">
+            <a class="cc-link" href="mailto:ivan99vera1@gmail.com">
+              <span class="cc-ico"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span>
+              <span class="cc-text"><small>Email</small><b>ivan99vera1@gmail.com</b></span>
+            </a>
+            <button class="panel-btn copy cc-copy" type="button" data-copy="ivan99vera1@gmail.com" aria-label="Copiar email">Copiar</button>
+          </li>
+          <li class="cc">
+            <a class="cc-link" href="https://www.linkedin.com/in/ivanvera7/" target="_blank" rel="noopener">
+              <span class="cc-ico"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></span>
+              <span class="cc-text"><small>LinkedIn</small><b>in/ivanvera7</b></span>
+              <svg class="cc-arrow" viewBox="0 0 16 16" width="18" height="18" aria-hidden="true"><path d="M5 11 11 5M6.2 5H11v4.8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </li>
+          <li class="cc">
+            <a class="cc-link" href="https://wa.me/34683224002" target="_blank" rel="noopener">
+              <span class="cc-ico"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg></span>
+              <span class="cc-text"><small>WhatsApp</small><b>683 224 002</b></span>
+              <svg class="cc-arrow" viewBox="0 0 16 16" width="18" height="18" aria-hidden="true"><path d="M5 11 11 5M6.2 5H11v4.8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </li>
+          <li class="cc">
+            <a class="cc-link" href="https://www.instagram.com/ivanvera7_/" target="_blank" rel="noopener">
+              <span class="cc-ico"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg></span>
+              <span class="cc-text"><small>Instagram</small><b>@ivanvera7_</b></span>
+              <svg class="cc-arrow" viewBox="0 0 16 16" width="18" height="18" aria-hidden="true"><path d="M5 11 11 5M6.2 5H11v4.8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </li>
+          <li class="cc">
+            <a class="cc-link" href="https://github.com/ivanvera7" target="_blank" rel="noopener">
+              <span class="cc-ico"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></span>
+              <span class="cc-text"><small>GitHub</small><b>@ivanvera7</b></span>
+              <svg class="cc-arrow" viewBox="0 0 16 16" width="18" height="18" aria-hidden="true"><path d="M5 11 11 5M6.2 5H11v4.8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </li>
+        </ul>
       </div>
 
-      <footer class="footer">
-        <p><span class="prompt">ivan@vera</span>:~$ <span class="dim">exit</span></p>
-        <p class="dim">© 2026 Iván Vera · Madrid · Hecho con HTML, CSS, JS y Claude.</p>
+      <footer class="footer wrap">
+        <p class="footer-prompt"><span>ivan@vera</span>:~$ exit</p>
+        <p>© 2026 Iván Vera · Madrid · Hecho con HTML, CSS, JS y Claude.</p>
       </footer>
     </section>
 
