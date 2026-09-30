@@ -411,7 +411,6 @@ body.pointer-fine .spotlight{ opacity:1; }
   display:flex; width:max-content;
   animation:marquee 42s linear infinite;
 }
-.marquee:hover .marquee-track{ animation-play-state:paused; }
 @keyframes marquee{ from{ transform:translateX(0); } to{ transform:translateX(-25%); } }
 
 .logo-row{ display:flex; gap:.8rem; margin:0; padding:0 .8rem; list-style:none; }
